@@ -32,11 +32,28 @@ namespace MVC.Controllers
         {
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                var productsItem = connection.QuerySingleOrDefault<ProductsViewModel>("select * from things where id = @Id", new { Id });
+                var productsItem = connection.QuerySingleOrDefault<ProductsViewModel>("select * from things where id = @id", new { Id });
                 return View(productsItem);
             }
         }
 
+        //[HttpPost]
+        //public ActionResult Create(ProductsViewModel model)
+        //{
+        //    using (var connection = new MySqlConnection(this.connectionString))
+        //    {
+        //        var newsQuery = "insert into cart (product_id, product_price) values (@Id, @)";
+
+        //        connection.Execute(newsQuery, new
+        //        {
+        //            header = @model.Header,
+        //            body = @model.Body
+
+        //        });
+        //        return RedirectToAction("Index");
+
+        //    }
+        //}
 
     }
 }
