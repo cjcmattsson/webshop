@@ -1,0 +1,157 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none
+    }
+}
+
+
+.products {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.single-product {
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .single-product {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .single-product {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .single-product {
+        width: 100%
+    }
+}
+
+.single-product h2 {
+    text-align: center;
+    height: 15%;
+    width: 80%;
+}
+
+.single-product img {
+    height: 250px;
+    width: 80%;
+}
+
+    .price-cart {
+        width: 80%;
+        display: flex;
+        flex-flow: row;
+        margin-top: auto;
+        margin-bottom: 20px;
+    }
+
+    .price-cart a {
+        margin-left: auto;
+    }
+
+.product-name {
+    color: salmon;
+}
+
+.product-info {
+    text-align: justify;
+    font-size: 15px;
+    width: 80%;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.single-product-info {
+    width: 80%;
+    text-align: justify;
+    font-size: 15p;
+}
+
+.one-product-page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-and-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-side-product {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    height: 50%;
+}
+
+.img-and-text img {
+    height: 350px;
+    width: 350px;
+}
+
+.img-and-text p {
+  width: 80%;
+  text-align: justify;
+ }
+
+button {
+    width: 100px;
+}

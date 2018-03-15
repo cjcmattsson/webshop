@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webshop", "Webshop.csproj", "{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

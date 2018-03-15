@@ -1,0 +1,22 @@
+﻿@model Webshop.Models.ProductsViewModel
+
+@{
+    ViewData["Title"] = @Model.Name;
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<a href="/products"><button>Back to Products</button></a>
+    <div class="one-product-page">
+        <div class="img-and-text">
+            <img src="@(Model.Img)">
+        <div class="right-side-product">
+            <p>@(Model.Info)</p> 
+        
+            <div class="price-cart">
+                <p>@(Model.Price) $</p> 
+                <a href="#"><button>Add To Cart</button></a>
+            </div>
+        </div>
+        </div>
+
+    </div>
