@@ -37,23 +37,23 @@ namespace MVC.Controllers
             }
         }
 
-        //[HttpPost]
-        //public ActionResult Create(ProductsViewModel model)
-        //{
-        //    using (var connection = new MySqlConnection(this.connectionString))
-        //    {
-        //        var newsQuery = "insert into cart (product_id, product_price) values (@Id, @)";
+        [HttpPost]
+        public ActionResult AddToCart(ProductsViewModel model)
+        {
+            using (var connection = new MySqlConnection(this.connectionString))
+            {
+                var newsQuery = "INSERT INTO cart (product_id, product_price) SELECT id, price FROM things WHERE id = @Id;";
 
-        //        connection.Execute(newsQuery, new
-        //        {
-        //            header = @model.Header,
-        //            body = @model.Body
+                connection.Execute(newsQuery, new
+                {
+                    id = @model.Id,
+                    body = @model.Price
 
-        //        });
-        //        return RedirectToAction("Index");
+                });
+                return RedirectToAction("Index");
 
-        //    }
-        //}
+            }
+        }
 
     }
 }

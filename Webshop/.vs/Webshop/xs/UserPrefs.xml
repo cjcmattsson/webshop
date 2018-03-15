@@ -1,13 +1,5 @@
 ﻿<Properties StartupConfiguration="{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Products/Index.cshtml">
-    <Files>
-      <File FileName="../../../../Projects/MVC/MVC/Controllers/NewsController.cs" Line="62" Column="10" />
-      <File FileName="Controllers/ProductsController.cs" Line="45" Column="122" />
-      <File FileName="../../../../Projects/MVC/MVC/Views/News/Create.cshtml" Line="1" Column="1" />
-      <File FileName="Models/ProductsViewModel.cs" Line="1" Column="1" />
-      <File FileName="Views/Products/Index.cshtml" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
