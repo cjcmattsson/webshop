@@ -23,6 +23,7 @@ namespace MVC.Controllers
             }
             //return View(this.products);
         }
+
         public ProductsController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
@@ -34,24 +35,6 @@ namespace MVC.Controllers
             {
                 var productsItem = connection.QuerySingleOrDefault<ProductsViewModel>("select * from things where id = @id", new { Id });
                 return View(productsItem);
-            }
-        }
-
-        [HttpPost]
-        public ActionResult AddToCart(ProductsViewModel model)
-        {
-            using (var connection = new MySqlConnection(this.connectionString))
-            {
-                var newsQuery = "INSERT INTO cart (product_id, product_price) SELECT id, price FROM things WHERE id = @Id;";
-
-                connection.Execute(newsQuery, new
-                {
-                    id = @model.Id,
-                    body = @model.Price
-
-                });
-                return RedirectToAction("Index");
-
             }
         }
 
