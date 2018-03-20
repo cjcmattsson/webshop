@@ -17,6 +17,7 @@
   <ItemGroup>
     <Folder Include="Views\Products\" />
     <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Checkout\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Cart\AddToCart.cshtml" />

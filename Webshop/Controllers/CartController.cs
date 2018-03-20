@@ -30,16 +30,21 @@ namespace Webshop.Controllers
             }
         }
 
+
+
         [HttpGet]
         public IActionResult Add(string Id)
         {
+            var cartId = Request.Cookies["CartID"];
+            
                 using (var connection = new MySqlConnection(this.connectionString))
                 {
-                    var addToCartQuery = "INSERT INTO cart (product_id, product_name, product_price) SELECT id, name, price FROM things WHERE id = @id";
+                var addToCartQuery = "INSERT INTO cart (product_id, product_name, product_price, cart_id) VALUES (SELECT id, name, price FROM things WHERE id = @id, @cartId)";
 
                     connection.Execute(addToCartQuery, new
                     {
-                        id = @Id
+                        id = @Id,
+                        cartId = @cartId
                        
                     });
 

@@ -12,6 +12,7 @@ namespace Webshop.Controllers
     {
         public IActionResult Index()
         {
+            this.GetCartCookie();
             return View();
         }
 
@@ -32,6 +33,18 @@ namespace Webshop.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public string GetCartCookie()
+        {
+            var cartId = Request.Cookies["CartID"];
+            if (cartId == null)
+            {
+                Guid guid = Guid.NewGuid();
+                Response.Cookies.Append("CartID", guid.ToString());
+                return guid.ToString();
+            }
+            return cartId;
         }
     }
 }

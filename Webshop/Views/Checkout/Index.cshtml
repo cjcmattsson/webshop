@@ -1,0 +1,30 @@
+﻿@model List<Webshop.Models.CheckoutViewModel>
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+    <ul>
+@foreach(var product in Model)
+{
+    <li>@(product.Product_name) - @(product.Product_price) $
+        <br>
+    </li>
+}
+    </ul>
+    <br>
+    @using (Html.BeginForm())
+{
+    <label for="name">Name</label>
+      <input type="text" name="name" value="" required >
+      <br>
+    <label for="address">Address</label>
+      <input type="text" name="address" value="" required >
+      <br>
+     <label for="creditcard">Creditcard</label>
+      <input type="number" name="creditcard" value="" required >
+      <br>
+    <button type="submit">Pay</button>
+}
