@@ -6,15 +6,28 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-    <ul>
+
+
 @foreach(var product in Model)
 {
-    <li>@(product.Product_name) - @(product.Product_price) $
-        <br>
-        <a href="/cart/remove/@(product.Id)">REMOVE FROM CART</a>
-        <br>
-    </li>
+    <div class="row mb-5" style="margin-bottom: 10px">
+            <div class="col-sm-4">
+
+            @(product.name)
+            </div>
+            <div class="col-sm-4">
+            @(product.price) $
+             </div>
+            <div class="col-sm-4">
+            <a class="btn btn-sm btn-danger" href="/cart/remove/@(product.Id)">X</a>
+                </div>
+    </div>
 }
-    </ul>
+       
+        <br>
+    
+
+
+    <a type="button" class="col-md-6 p-0 btn btn-lg btn-block btn-primary" href="/checkout" style="padding-left: 0px">Proceed to Checkout</a>
     <br>
-    <a href="/checkout"><button>Proceed to Checkout</button></a>
+    <br>

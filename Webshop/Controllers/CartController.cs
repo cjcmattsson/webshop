@@ -23,9 +23,11 @@ namespace Webshop.Controllers
 
         public IActionResult Index() 
         {
+            var cartId = Request.Cookies["CartID"];
+
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                var cart = connection.Query<CartProductModel>("select * from cart").ToList();
+                var cart = connection.Query<CartProductModel>("select * from cart LEFT JOIN things ON cart.product_id=things.id WHERE cart_id = @cartId", new {cartId}).ToList();
                 return View(cart);
             }
         }
@@ -39,14 +41,11 @@ namespace Webshop.Controllers
             
                 using (var connection = new MySqlConnection(this.connectionString))
                 {
-                var addToCartQuery = "INSERT INTO cart (product_id, product_name, product_price, cart_id) VALUES (SELECT id, name, price FROM things WHERE id = @id, @cartId)";
+                
+             
+                var addToCartQuery = "INSERT INTO cart (product_id, cart_id) VALUES(@id, @cartId)";
 
-                    connection.Execute(addToCartQuery, new
-                    {
-                        id = @Id,
-                        cartId = @cartId
-                       
-                    });
+                    connection.Execute(addToCartQuery, new { Id ,cartId });
 
                 }
             return RedirectToAction("Index");
@@ -60,11 +59,7 @@ namespace Webshop.Controllers
             {
                 var addToCartQuery = "DELETE FROM cart WHERE id = @id";
 
-                connection.Execute(addToCartQuery, new
-                {
-                    id = @Id
-
-                });
+                connection.Execute(addToCartQuery, new {Id});
 
             }
             return RedirectToAction("Index");
