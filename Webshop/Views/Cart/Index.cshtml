@@ -5,24 +5,41 @@
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
-
-
+<a href="/products"><button>Keep Shopping</button></a>
+<table class="cart">
+    <tr class="row" style="font-weight: bold;">
+            <td class=" ">
+            Product
+            </td>
+            <td class=" ">
+            Price
+             </td>
+            <td class=" ">
+           Number of products
+             </td>
+             <td class=" ">
+           
+             </td>
 
 @foreach(var product in Model)
 {
-    <div class="row mb-5" style="margin-bottom: 10px">
-            <div class="col-sm-4">
-
-            @(product.name)
-            </div>
-            <div class="col-sm-4">
+    <tr class="row mb-5" style="margin-bottom: 10px">
+            <td class=" ">
+            @(product.name) 
+            </td>
+            <td class=" ">
             @(product.price) $
-             </div>
-            <div class="col-sm-4">
-            <a class="btn btn-sm btn-danger" href="/cart/remove/@(product.Id)">X</a>
-                </div>
-    </div>
+             </td>
+            <td class=" ">
+            @(product.amount)
+             </td>
+            <td class=" ">
+            <a class="btn btn-sm btn-danger" href="/cart/remove/@(product.cart_item_id)">X</a>
+            </td>
+    </tr>
+    <br>
 }
+</table>
        
         <br>
     

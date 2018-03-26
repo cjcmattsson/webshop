@@ -21,11 +21,12 @@ namespace Webshop.Controllers
             this.connectionString = configuration.GetConnectionString("ConnectionString");
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
+            var cartId = Request.Cookies["CartID"];
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                var checkout = connection.Query<CheckoutViewModel>("select * from cart").ToList();
+                var checkout = connection.Query<CheckoutViewModel>("select * from cart JOIN things ON cart.product_id=things.id WHERE cart_id = @cartId", new { cartId }).ToList();
                 return View(checkout);
             }
         }
