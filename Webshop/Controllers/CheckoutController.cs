@@ -26,7 +26,12 @@ namespace Webshop.Controllers
             var cartId = Request.Cookies["CartID"];
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                var checkout = connection.Query<CheckoutViewModel>("select * from cart JOIN things ON cart.product_id=things.id WHERE cart_id = @cartId", new { cartId }).ToList();
+                var checkout = connection.Query<CheckoutViewModel>(
+                    "select *, COUNT(product_id) AS amount " +
+                    "FROM cart JOIN things ON cart.product_id=things.id WHERE " +
+                    "cart_id = @cartId GROUP BY product_id", new { cartId }).ToList();
+
+
                 return View(checkout);
             }
         }

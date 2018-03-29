@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Cart/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/HomeController.cs">
     <Files>
-      <File FileName="Controllers/CartController.cs" Line="30" Column="101" />
-      <File FileName="Models/CartProductModel.cs" Line="10" Column="40" />
-      <File FileName="Views/Cart/Index.cshtml" Line="22" Column="19" />
-      <File FileName="Models/ProductsViewModel.cs" Line="6" Column="33" />
-      <File FileName="Views/Products/Index.cshtml" Line="15" Column="32" />
-      <File FileName="wwwroot/css/site.css" Line="185" Column="16" />
-      <File FileName="Views/Products/SingleProduct.cshtml" Line="8" Column="1" />
+      <File FileName="Controllers/CartController.cs" Line="32" Column="21" />
+      <File FileName="Views/Cart/Index.cshtml" Line="23" Column="19" />
+      <File FileName="Controllers/CheckoutController.cs" Line="32" Column="87" />
+      <File FileName="Views/Checkout/Index.cshtml" Line="56" Column="13" />
+      <File FileName="Models/CartProductModel.cs" Line="10" Column="9" />
+      <File FileName="Models/CheckoutViewModel.cs" Line="12" Column="40" />
+      <File FileName="Controllers/HomeController.cs" Line="47" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

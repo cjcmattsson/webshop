@@ -27,7 +27,11 @@ namespace Webshop.Controllers
 
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                var cart = connection.Query<CartProductModel>("select *, COUNT(product_id) AS amount FROM cart JOIN things ON cart.product_id=things.id WHERE cart_id = @cartId GROUP BY product_id", new {cartId}).ToList();
+                
+                var cart = connection.Query<CartProductModel>(
+                    "select *, COUNT(product_id) AS amount " +
+                    "FROM cart JOIN things ON cart.product_id=things.id WHERE " +
+                    "cart_id = @cartId GROUP BY product_id", new {cartId}).ToList();
                 return View(cart);
             }
         }
@@ -52,13 +56,14 @@ namespace Webshop.Controllers
         }
 
         [HttpGet]
-        public IActionResult Remove(string cart_item_id)
+        public IActionResult Remove(string id)
         {
+            var cartId = Request.Cookies["CartID"];
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                var removeFromCartQuery = "DELETE FROM cart WHERE cart_item_id = @cart_item_id";
+                var removeFromCartQuery = "DELETE FROM cart WHERE cart_item_id = @cart_item_id AND cart_id = @cartId LIMIT 1";
 
-                connection.Execute(removeFromCartQuery, new { cart_item_id });
+                connection.Execute(removeFromCartQuery, new { cart_item_id = id, cartId });
 
             }
             return RedirectToAction("Index");

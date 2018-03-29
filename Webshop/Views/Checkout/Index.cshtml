@@ -6,25 +6,51 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-    <ul>
+    <table class="col-md-6">
+    <tr class="row" style="font-weight: bold;">
+            <td class=" ">
+            Product
+            </td>
+            <td class=" ">
+            Price
+             </td>
+            <td class=" ">
+           Number of products
+             </td>
 @foreach(var product in Model)
 {
-    <li>@(product.name) - @(product.price) $
-        <br>
-    </li>
+    <tr class="row mb-5" style="margin-bottom: 10px">
+            <td class=" ">
+            @(product.name) 
+            </td>
+            <td class=" ">
+            @(product.price) $ (a piece)
+             </td>
+            <td class=" ">
+            @(product.amount)
+             </td>
+    </tr>
 }
-    </ul>
+    </table>
     <br>
+    <table class="col-md-6">
     @using (Html.BeginForm())
 {
-    <label for="name">Name</label>
-      <input type="text" name="name" value="" required >
-      <br>
-    <label for="address">Address</label>
-      <input type="text" name="address" value="" required >
-      <br>
-     <label for="creditcard">Creditcard</label>
-      <input type="number" name="creditcard" value="" required >
-      <br>
-    <button type="submit">Pay</button>
+    <tr>
+    <td><label for="name">Name</label></td>
+     <td> <input type="text" name="name" value="" required ></td>
+      </tr>
+    <tr>
+    <td><label for="address">Address</label></td>
+     <td> <input type="text" name="Address" value="" required ></td>
+      </tr>
+     <tr>
+    <td><label for="creditcard">Creditcard</label></td>
+     <td> <input type="text" name="creditcard" value="" required ></td>
+      </tr>
+    <tr>
+        <td></td>
+    <td><button class="col-md-6 p-0 btn btn-lg btn-block btn-primary" type="submit">Pay</button></td>
+        </tr>
 }
+    </table>

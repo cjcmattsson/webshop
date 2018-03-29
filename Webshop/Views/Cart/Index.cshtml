@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Cart";
+    int cost = 0;
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
@@ -28,7 +29,7 @@
             @(product.name) 
             </td>
             <td class=" ">
-            @(product.price) $
+            @(product.price) $ (a piece)
              </td>
             <td class=" ">
             @(product.amount)
@@ -37,10 +38,12 @@
             <a class="btn btn-sm btn-danger" href="/cart/remove/@(product.cart_item_id)">X</a>
             </td>
     </tr>
+        
     <br>
+        cost += (product.price*product.amount);
 }
 </table>
-       
+       <h4 class="">Total cost of your awesome stuff: @cost $</h4>
         <br>
     
 

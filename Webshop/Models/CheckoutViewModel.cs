@@ -9,7 +9,7 @@ namespace Webshop.Models
         public int Product_id { get; set; }
         public string name { get; set; }
         public int price { get; set; }
-
+        public int amount { get; set; }
         
         public int Adress { get; set; }
         public string Phone_number { get; set; }
