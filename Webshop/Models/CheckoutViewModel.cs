@@ -10,9 +10,11 @@ namespace Webshop.Models
         public string name { get; set; }
         public int price { get; set; }
         public int amount { get; set; }
-        
-        public int Adress { get; set; }
-        public string Phone_number { get; set; }
-        public int Email_address { get; set; }
+
+
+        public string customer_name { get; set; }
+        public string address { get; set; }
+        public int creditcard { get; set; }
+        public int cost { get; set; }
     }
 }

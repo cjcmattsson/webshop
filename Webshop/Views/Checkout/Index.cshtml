@@ -1,7 +1,9 @@
 ﻿@model List<Webshop.Models.CheckoutViewModel>
 
+
 @{
     ViewData["Title"] = "Checkout";
+    int cost = 0;
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
@@ -30,11 +32,14 @@
             @(product.amount)
              </td>
     </tr>
+        cost += (product.price*product.amount);
 }
     </table>
+
     <br>
     <table class="col-md-6">
-    @using (Html.BeginForm())
+    <h4 class="col-md-6 text-center" style="font-weight: bold;">Customer Details</h4>
+    @using (Html.BeginForm("Pay", "Checkout"))
 {
     <tr>
     <td><label for="name">Name</label></td>
@@ -42,15 +47,15 @@
       </tr>
     <tr>
     <td><label for="address">Address</label></td>
-     <td> <input type="text" name="Address" value="" required ></td>
+     <td> <input type="text" name="Address" value="" ></td>
       </tr>
      <tr>
     <td><label for="creditcard">Creditcard</label></td>
-     <td> <input type="text" name="creditcard" value="" required ></td>
+     <td> <input type="text" name="creditcard" value="" ></td>
       </tr>
     <tr>
-        <td></td>
-    <td><button class="col-md-6 p-0 btn btn-lg btn-block btn-primary" type="submit">Pay</button></td>
+        <td><input type="hidden" name="cost" value="@cost" ></td>
+    <td><button class="col-md-6 p-0 btn btn-lg btn-block btn-primary" type="submit">Pay @cost $</button></td>
         </tr>
 }
     </table>

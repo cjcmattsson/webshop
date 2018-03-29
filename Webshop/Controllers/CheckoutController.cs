@@ -36,6 +36,28 @@ namespace Webshop.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult Pay(string name, string address, int creditcard, int cost)
+        {
+            //var cartId = Request.Cookies["CartID"];
+
+            using (var connection = new MySqlConnection(this.connectionString))
+            {
+
+                var payProducts = "INSERT INTO orders (customer_name, address, creditcard, cost) VALUES(@name, @address, @creditcard, @cost)";
+
+                connection.Execute(payProducts, new { 
+                    name = @name,
+                    address = @address, 
+                    creditcard = @creditcard,
+                    cost = @cost
+                });
+
+            }
+            return RedirectToAction("Index");
+
+        }
+
 
     }
 }
