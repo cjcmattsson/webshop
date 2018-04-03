@@ -25,6 +25,7 @@ namespace Webshop.Controllers
         {
             var cartId = Request.Cookies["CartID"];
 
+
             using (var connection = new MySqlConnection(this.connectionString))
             {
                 
@@ -69,5 +70,7 @@ namespace Webshop.Controllers
             return RedirectToAction("Index");
 
         }
+
+
     }
 }

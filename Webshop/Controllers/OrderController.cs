@@ -24,6 +24,8 @@ namespace Webshop.Controllers
         public IActionResult Index(int id)
         {
             var cartId = Request.Cookies["CartID"];
+            Guid guid = Guid.NewGuid();
+            Response.Cookies.Append("CartID", guid.ToString());
             using (var connection = new MySqlConnection(this.connectionString))
             {
                 var order = connection.Query<OrderViewModel>(
@@ -37,6 +39,8 @@ namespace Webshop.Controllers
         public IActionResult Pay(string name, string address, int creditcard, int cost)
         {
             var cartId = Request.Cookies["CartID"];
+
+
             using (var connection = new MySqlConnection(this.connectionString))
             {
 
