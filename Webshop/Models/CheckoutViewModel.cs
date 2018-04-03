@@ -12,6 +12,7 @@ namespace Webshop.Models
         public int amount { get; set; }
 
 
+        public string id { get; set; }
         public string customer_name { get; set; }
         public string address { get; set; }
         public int creditcard { get; set; }

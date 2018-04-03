@@ -39,7 +39,7 @@
     <br>
     <table class="col-md-6">
     <h4 class="col-md-6 text-center" style="font-weight: bold;">Customer Details</h4>
-    @using (Html.BeginForm("Pay", "Checkout"))
+    @using (Html.BeginForm("Pay", "Order"))
 {
     <tr>
     <td><label for="name">Name</label></td>
@@ -54,7 +54,8 @@
      <td> <input type="text" name="creditcard" value="" ></td>
       </tr>
     <tr>
-        <td><input type="hidden" name="cost" value="@cost" ></td>
+        <td><input type="hidden" name="cost" value="@cost"></td>
+
     <td><button class="col-md-6 p-0 btn btn-lg btn-block btn-primary" type="submit">Pay @cost $</button></td>
         </tr>
 }

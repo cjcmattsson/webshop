@@ -1,0 +1,20 @@
+﻿@model List<Webshop.Models.OrderViewModel>
+
+@{
+    ViewData["Title"] = "Order Receipt";
+}
+<div class="row">
+    <div class="col">
+@foreach(var customer in Model)
+{
+<h2>@ViewData["Title"]</h2>
+<h3 class="text-center">Thank you for your purchase, @(customer.customer_name)!</h3>
+        <br>
+    <p class="text-center">Make sure to pay the amount of @(customer.cost)$ ASAP. <br>
+        Your goods will be delivered to @(customer.address) within the next decade. <br>
+        Make sure to stay at home during this time. <br>
+
+        </p>
+}
+   </div>
+</div>

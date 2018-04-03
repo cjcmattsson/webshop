@@ -1,11 +1,9 @@
 ﻿<Properties StartupConfiguration="{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/OrderViewModel.cs">
     <Files>
-      <File FileName="Controllers/CheckoutController.cs" Line="40" Column="82" />
-      <File FileName="Views/Checkout/Index.cshtml" Line="61" Column="13" />
-      <File FileName="Models/CheckoutViewModel.cs" Line="18" Column="38" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
-      <File FileName="Controllers/HomeController.cs" Line="15" Column="34" />
+      <File FileName="Models/OrderViewModel.cs" Line="12" Column="2" />
+      <File FileName="Controllers/OrderController.cs" Line="59" Column="9" />
+      <File FileName="Views/Order/Index.cshtml" Line="12" Column="141" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
