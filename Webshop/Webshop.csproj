@@ -22,5 +22,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Cart\AddToCart.cshtml" />
+    <None Remove="Webshop.Project.Core\bin\Debug\netcoreapp2.0\Webshop.Project.Core.dll" />
+    <None Remove="Webshop.Project.Core\bin\Debug\netcoreapp2.0\Webshop.Project.Core.pdb" />
+    <None Remove="Webshop.Project.Core\obj\Webshop.Project.Core.csproj.nuget.cache" />
+    <None Remove="Webshop.Project.Core\obj\Webshop.Project.Core.csproj.nuget.g.props" />
+    <None Remove="Webshop.Project.Core\obj\Webshop.Project.Core.csproj.nuget.g.targets" />
+    <None Remove="Webshop.Project.Core\obj\Debug\netcoreapp2.0\Webshop.Project.Core.AssemblyInfoInputs.cache" />
+    <None Remove="Webshop.Project.Core\obj\Debug\netcoreapp2.0\Webshop.Project.Core.csproj.CoreCompileInputs.cache" />
+    <None Remove="Webshop.Project.Core\obj\Debug\netcoreapp2.0\Webshop.Project.Core.csproj.FileListAbsolute.txt" />
+    <None Remove="Webshop.Project.Core\obj\Debug\netcoreapp2.0\Webshop.Project.Core.csprojResolveAssemblyReference.cache" />
+    <None Remove="Webshop.Project.Core\obj\Debug\netcoreapp2.0\Webshop.Project.Core.dll" />
+    <None Remove="Webshop.Project.Core\obj\Debug\netcoreapp2.0\Webshop.Project.Core.pdb" />
+    <None Remove="Webshop.Unittest\obj\Webshop.Unittest.csproj.nuget.cache" />
+    <None Remove="Webshop.Unittest\obj\Webshop.Unittest.csproj.nuget.g.props" />
+    <None Remove="Webshop.Unittest\obj\Webshop.Unittest.csproj.nuget.g.targets" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Webshop.Project.Core\Webshop.Project.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Webshop.Project.Core\bin\Debug\netcoreapp2.0\Webshop.Project.Core.deps.json" />
+    <Content Remove="Webshop.Project.Core\obj\project.assets.json" />
+    <Content Remove="Webshop.Unittest\obj\project.assets.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Webshop.Project.Core\Class1.cs" />
+    <Compile Remove="Webshop.Project.Core\obj\Debug\netcoreapp2.0\Webshop.Project.Core.AssemblyInfo.cs" />
+    <Compile Remove="Webshop.Unittest\Class1.cs" />
   </ItemGroup>
 </Project>

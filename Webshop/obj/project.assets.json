@@ -4876,6 +4876,20 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "Webshop.Project.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Dapper": "1.50.4",
+          "MySql.Data": "6.10.6"
+        },
+        "compile": {
+          "bin/placeholder/Webshop.Project.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Webshop.Project.Core.dll": {}
+        }
       }
     }
   },
@@ -12837,6 +12851,11 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "Webshop.Project.Core/1.0.0": {
+      "type": "project",
+      "path": "../Webshop.Project.Core/Webshop.Project.Core.csproj",
+      "msbuildProject": "../Webshop.Project.Core/Webshop.Project.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12844,7 +12863,8 @@
       "Dapper >= 1.50.4",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "MySql.Data >= 6.10.6"
+      "MySql.Data >= 6.10.6",
+      "Webshop.Project.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12874,7 +12894,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/Webshop.Project.Core.csproj": {
+              "projectPath": "/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/Webshop.Project.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

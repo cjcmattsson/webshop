@@ -1,0 +1,9 @@
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/bin/Debug/netcoreapp2.0/Webshop.Project.Core.deps.json
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/bin/Debug/netcoreapp2.0/Webshop.Project.Core.dll
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/bin/Debug/netcoreapp2.0/Webshop.Project.Core.pdb
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/obj/Debug/netcoreapp2.0/Webshop.Project.Core.csprojResolveAssemblyReference.cache
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/obj/Debug/netcoreapp2.0/Webshop.Project.Core.csproj.CoreCompileInputs.cache
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/obj/Debug/netcoreapp2.0/Webshop.Project.Core.AssemblyInfoInputs.cache
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/obj/Debug/netcoreapp2.0/Webshop.Project.Core.AssemblyInfo.cs
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/obj/Debug/netcoreapp2.0/Webshop.Project.Core.dll
+/Users/crippa/Documents/GitHub/webshop/Webshop.Project.Core/obj/Debug/netcoreapp2.0/Webshop.Project.Core.pdb

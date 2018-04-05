@@ -1,16 +1,5 @@
-﻿<Properties StartupConfiguration="{B0A55A08-5544-4765-B1C7-C6E711D0C1DD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/CartController.cs">
-    <Files>
-      <File FileName="Models/OrderViewModel.cs" Line="12" Column="2" />
-      <File FileName="Controllers/OrderController.cs" Line="32" Column="36" />
-      <File FileName="Views/Order/Index.cshtml" Line="11" Column="80" />
-      <File FileName="Controllers/CheckoutController.cs" Line="1" Column="1" />
-      <File FileName="Views/Checkout/Index.cshtml" Line="42" Column="29" />
-      <File FileName="Controllers/HomeController.cs" Line="48" Column="10" />
-      <File FileName="Controllers/CartController.cs" Line="25" Column="10" />
-      <File FileName="Controllers/ProductsController.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{0997C105-99E6-4DF8-B4C1-C0575800FC42}|Default">
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

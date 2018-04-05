@@ -7,6 +7,7 @@ using Webshop.Models;
 using MySql.Data.MySqlClient;
 using Dapper;
 using Microsoft.Extensions.Configuration;
+using Webshop.Project.Core.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

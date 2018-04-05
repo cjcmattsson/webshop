@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Webshop.Models
+namespace Webshop.Project.Core.Models
 
 {
     public class CartProductModel

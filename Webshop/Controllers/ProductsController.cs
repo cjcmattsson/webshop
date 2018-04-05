@@ -7,36 +7,37 @@ using Webshop.Models;
 using MySql.Data.MySqlClient;
 using Dapper;
 using Microsoft.Extensions.Configuration;
+using Webshop.Project.Core.Models;
+using Webshop.Project.Core.Services.Implementations;
+using Webshop.Project.Core.Repositories.Implementations;
+using System.Data.SqlClient;
+using Webshop.Project.Core.Repositories;
+
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 namespace MVC.Controllers
 {
     public class ProductsController : Controller
     {
         private readonly string connectionString;
+        private ProductService productService;
 
         public IActionResult Index()
         {
-            using (var connection = new MySqlConnection(this.connectionString))
-            {
-                var products = connection.Query<ProductsViewModel>("select * from things").ToList();
-                return View(products);
-            }
-            //return View(this.products);
+            List<ProductsViewModel> products = productService.GetAll();
+            return View(products);
+
         }
 
         public ProductsController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
+            productService = new ProductService(new ProductRepository(this.connectionString));
         }
 
         public IActionResult SingleProduct(string Id)
         {
-            using (var connection = new MySqlConnection(this.connectionString))
-            {
-                var productsItem = connection.QuerySingleOrDefault<ProductsViewModel>("select * from things where id = @id", new { Id });
-                return View(productsItem);
-            }
+            var singleProduct = this.productService.singleProduct(Id);
+            return View(singleProduct);
         }
-
     }
 }

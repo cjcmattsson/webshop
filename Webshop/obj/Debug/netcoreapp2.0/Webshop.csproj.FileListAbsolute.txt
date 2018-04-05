@@ -20,3 +20,5 @@
 /Users/crippa/Documents/GitHub/webshop/Webshop/obj/Debug/netcoreapp2.0/Webshop.AssemblyInfo.cs
 /Users/crippa/Documents/GitHub/webshop/Webshop/obj/Debug/netcoreapp2.0/Webshop.dll
 /Users/crippa/Documents/GitHub/webshop/Webshop/obj/Debug/netcoreapp2.0/Webshop.pdb
+/Users/crippa/Documents/GitHub/webshop/Webshop/bin/Debug/netcoreapp2.0/Webshop.Project.Core.dll
+/Users/crippa/Documents/GitHub/webshop/Webshop/bin/Debug/netcoreapp2.0/Webshop.Project.Core.pdb
