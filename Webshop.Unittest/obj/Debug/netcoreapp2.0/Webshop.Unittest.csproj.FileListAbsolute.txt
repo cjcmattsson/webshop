@@ -7,3 +7,11 @@
 /Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/obj/Debug/netcoreapp2.0/Webshop.Unittest.AssemblyInfo.cs
 /Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/obj/Debug/netcoreapp2.0/Webshop.Unittest.dll
 /Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/obj/Debug/netcoreapp2.0/Webshop.Unittest.pdb
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/NUnit3.TestAdapter.dll
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/NUnit3.TestAdapter.pdb
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/nunit.engine.netstandard.dll
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/Mono.Cecil.dll
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/Webshop.Unittest.runtimeconfig.json
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/Webshop.Unittest.runtimeconfig.dev.json
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/Webshop.Project.Core.dll
+/Users/crippa/Documents/GitHub/webshop/Webshop.Unittest/bin/Debug/netcoreapp2.0/Webshop.Project.Core.pdb
