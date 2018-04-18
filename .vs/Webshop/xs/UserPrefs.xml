@@ -1,12 +1,16 @@
 ﻿<Properties StartupConfiguration="{4D241D0F-AE47-4816-830D-4FA463EA061A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Webshop/Controllers/ProductsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Webshop/Views/Home/Contact.cshtml">
     <Files>
-      <File FileName="Webshop.Unittest/Services/ProductsServiceTest.cs" Line="33" Column="40" />
-      <File FileName="Webshop.Project.Core/Repositories/Implementations/ProductRepository.cs" Line="19" Column="47" />
-      <File FileName="Webshop.Project.Core/Models/ProductsViewModel.cs" Line="1" Column="1" />
-      <File FileName="Webshop.Project.Core/Services/Implementations/ProductService.cs" Line="9" Column="53" />
-      <File FileName="Webshop.Project.Core/Repositories/IProductRepository.cs" Line="10" Column="12" />
-      <File FileName="Webshop/Controllers/ProductsController.cs" Line="35" Column="10" />
+      <File FileName="Webshop.Unittest/Services/ProductsServiceTest.cs" Line="44" Column="10" />
+      <File FileName="Webshop.Project.Core/Repositories/Implementations/ProductRepository.cs" Line="27" Column="49" />
+      <File FileName="Webshop.Project.Core/Models/ProductsViewModel.cs" Line="8" Column="8" />
+      <File FileName="Webshop.Project.Core/Services/Implementations/ProductService.cs" Line="21" Column="10" />
+      <File FileName="Webshop.Project.Core/Repositories/IProductRepository.cs" Line="10" Column="47" />
+      <File FileName="Webshop/Controllers/ProductsController.cs" Line="27" Column="25" />
+      <File FileName="Webshop/Controllers/OrderController.cs" Line="48" Column="105" />
+      <File FileName="Webshop/Views/Home/Index.cshtml" Line="9" Column="205" />
+      <File FileName="Webshop/Views/Home/About.cshtml" Line="3" Column="46" />
+      <File FileName="Webshop/Views/Home/Contact.cshtml" Line="15" Column="69" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
